@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Routes &mdash; Pref 1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Business Logic" href="backend_docs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Pref
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Backend Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="backend_docs.html">Business Logic</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Routes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dashboard-routes">Dashboard Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_complained_orders"><code class="docutils literal notranslate"><span class="pre">get_complained_orders()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_delivery_visits"><code class="docutils literal notranslate"><span class="pre">get_delivery_visits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_order_status_counts"><code class="docutils literal notranslate"><span class="pre">get_order_status_counts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_orders_not_delivered"><code class="docutils literal notranslate"><span class="pre">get_orders_not_delivered()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_phases"><code class="docutils literal notranslate"><span class="pre">get_phases()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_successful_deliveries"><code class="docutils literal notranslate"><span class="pre">get_successful_deliveries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_successful_deliveries_out_of_promised_date"><code class="docutils literal notranslate"><span class="pre">get_successful_deliveries_out_of_promised_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.dashboard_routes.get_successful_deliveries_within_promised_date"><code class="docutils literal notranslate"><span class="pre">get_successful_deliveries_within_promised_date()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-unit-routes">Data Unit Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.data_unit_routes.add_package"><code class="docutils literal notranslate"><span class="pre">add_package()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ocpm-routes">OCPM Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#process-mining-routes">Process Mining Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.add_package"><code class="docutils literal notranslate"><span class="pre">add_package()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_activities_preditions"><code class="docutils literal notranslate"><span class="pre">get_activities_preditions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_avg_time"><code class="docutils literal notranslate"><span class="pre">get_avg_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_case_concept_name_columns"><code class="docutils literal notranslate"><span class="pre">get_case_concept_name_columns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_conformance_checkpoints"><code class="docutils literal notranslate"><span class="pre">get_conformance_checkpoints()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_non_conformance_path"><code class="docutils literal notranslate"><span class="pre">get_non_conformance_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_off_track_ongoing_orders"><code class="docutils literal notranslate"><span class="pre">get_off_track_ongoing_orders()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_off_track_orders"><code class="docutils literal notranslate"><span class="pre">get_off_track_orders()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.get_packages"><code class="docutils literal notranslate"><span class="pre">get_packages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.packageToDTO"><code class="docutils literal notranslate"><span class="pre">packageToDTO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.proccess_model_start"><code class="docutils literal notranslate"><span class="pre">proccess_model_start()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.proccess_model_verify"><code class="docutils literal notranslate"><span class="pre">proccess_model_verify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.process_mining_routes.xes_to_csv"><code class="docutils literal notranslate"><span class="pre">xes_to_csv()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#statistics-routes">Statistics Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.evolution_data"><code class="docutils literal notranslate"><span class="pre">evolution_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_complained_orders_by_year_month"><code class="docutils literal notranslate"><span class="pre">get_complained_orders_by_year_month()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_complained_packages_by_last_days_or_months"><code class="docutils literal notranslate"><span class="pre">get_complained_packages_by_last_days_or_months()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_filter_fields"><code class="docutils literal notranslate"><span class="pre">get_filter_fields()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_monthly_deliveries"><code class="docutils literal notranslate"><span class="pre">get_monthly_deliveries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_packages"><code class="docutils literal notranslate"><span class="pre">get_packages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_recent_deliveries"><code class="docutils literal notranslate"><span class="pre">get_recent_deliveries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_recyclable_packages"><code class="docutils literal notranslate"><span class="pre">get_recyclable_packages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_sensor_data_per_transportation_method"><code class="docutils literal notranslate"><span class="pre">get_sensor_data_per_transportation_method()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_stores_and_shipping_companies"><code class="docutils literal notranslate"><span class="pre">get_stores_and_shipping_companies()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_top_complained_packages"><code class="docutils literal notranslate"><span class="pre">get_top_complained_packages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_top_complained_products"><code class="docutils literal notranslate"><span class="pre">get_top_complained_products()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_top_complained_products_percentage"><code class="docutils literal notranslate"><span class="pre">get_top_complained_products_percentage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.get_years"><code class="docutils literal notranslate"><span class="pre">get_years()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.ongoing_deliveries"><code class="docutils literal notranslate"><span class="pre">ongoing_deliveries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.services.statistics_routes.sensor_variation"><code class="docutils literal notranslate"><span class="pre">sensor_variation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pref</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Routes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/routes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="routes">
+<h1>Routes<a class="headerlink" href="#routes" title="Link to this heading"></a></h1>
+<p>This section outlines the routes available in different parts of the application.</p>
+<section id="dashboard-routes">
+<h2>Dashboard Routes<a class="headerlink" href="#dashboard-routes" title="Link to this heading"></a></h2>
+<p>These routes handle the dashboard functionality.</p>
+<dl class="py function" id="module-app.services.dashboard_routes">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_complained_orders">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_complained_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_complained_orders" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the orders that have complaints for a specific year, month, store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which complained orders are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which complained orders are to be retrieved.</p></li>
+<li><p><strong>store</strong> (<em>str</em><em>, </em><em>optional</em>) – The store for which complained orders are to be retrieved.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em><em>, </em><em>optional</em>) – The shipping company for which complained orders are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the complained orders, or an error message if the parameters are invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_delivery_visits">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_delivery_visits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_delivery_visits" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the delivery visits for a specific year, month, store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which delivery visits are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which delivery visits are to be retrieved.</p></li>
+<li><p><strong>store</strong> (<em>str</em><em>, </em><em>optional</em>) – The store for which delivery visits are to be retrieved.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em><em>, </em><em>optional</em>) – The shipping company for which delivery visits are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the delivery visits, or an error message if the parameters are invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_order_status_counts">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_order_status_counts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_order_status_counts" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the count of orders based on their status for a specific year.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>year</strong> (<em>int</em>) – The year for which order status counts are required.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object with order status counts for the specified year, or an error message if the year is invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_orders_not_delivered">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_orders_not_delivered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_orders_not_delivered" title="Link to this definition"></a></dt>
+<dd><p>Retrieves orders that were not delivered for a specific year and optional month.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which non-delivered orders are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which non-delivered orders are to be retrieved. If not provided, data for the entire year will be fetched.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing non-delivered orders, or an error message if the year or month is invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_phases">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_phases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_phases" title="Link to this definition"></a></dt>
+<dd><p>Fetches the phases of an order based on the provided order ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>order_id</strong> (<em>str</em>) – The order ID for which the phases are to be retrieved.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the phases of the order, or an error message if the order ID is invalid or missing.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_successful_deliveries">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_successful_deliveries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_successful_deliveries" title="Link to this definition"></a></dt>
+<dd><p>Retrieves successful deliveries for a specific year, month, store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which successful deliveries are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which successful deliveries are to be retrieved.</p></li>
+<li><p><strong>store</strong> (<em>str</em><em>, </em><em>optional</em>) – The store for which successful deliveries are to be retrieved.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em><em>, </em><em>optional</em>) – The shipping company for which successful deliveries are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the successful deliveries, or an error message if the parameters are invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_successful_deliveries_out_of_promised_date">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_successful_deliveries_out_of_promised_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_successful_deliveries_out_of_promised_date" title="Link to this definition"></a></dt>
+<dd><p>Retrieves successful deliveries made outside of the promised delivery date for a specific year, month, store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which successful deliveries outside the promised date are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which successful deliveries outside the promised date are to be retrieved.</p></li>
+<li><p><strong>store</strong> (<em>str</em><em>, </em><em>optional</em>) – The store for which successful deliveries outside the promised date are to be retrieved.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em><em>, </em><em>optional</em>) – The shipping company for which successful deliveries outside the promised date are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the successful deliveries made outside the promised date, or an error message if the parameters are invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.dashboard_routes.get_successful_deliveries_within_promised_date">
+<span class="sig-prename descclassname"><span class="pre">app.services.dashboard_routes.</span></span><span class="sig-name descname"><span class="pre">get_successful_deliveries_within_promised_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.dashboard_routes.get_successful_deliveries_within_promised_date" title="Link to this definition"></a></dt>
+<dd><p>Retrieves successful deliveries made within the promised delivery date for a specific year, month, store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for which successful deliveries within the promised date are to be retrieved.</p></li>
+<li><p><strong>month</strong> (<em>int</em><em>, </em><em>optional</em>) – The month for which successful deliveries within the promised date are to be retrieved.</p></li>
+<li><p><strong>store</strong> (<em>str</em><em>, </em><em>optional</em>) – The store for which successful deliveries within the promised date are to be retrieved.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em><em>, </em><em>optional</em>) – The shipping company for which successful deliveries within the promised date are to be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the successful deliveries made within the promised date, or an error message if the parameters are invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="data-unit-routes">
+<h2>Data Unit Routes<a class="headerlink" href="#data-unit-routes" title="Link to this heading"></a></h2>
+<p>These routes deal with operations related to data units.</p>
+<dl class="py function" id="module-app.services.data_unit_routes">
+<dt class="sig sig-object py" id="app.services.data_unit_routes.add_package">
+<span class="sig-prename descclassname"><span class="pre">app.services.data_unit_routes.</span></span><span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.data_unit_routes.add_package" title="Link to this definition"></a></dt>
+<dd><p>Retrieves all available data units.</p>
+<p>This endpoint fetches all the data units stored in the system. If no data units are available,
+it returns a message indicating that no data units are available. If data units are found, they
+are returned as part of the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the data units and an optional message, or an empty list if no data units are found.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="ocpm-routes">
+<h2>OCPM Routes<a class="headerlink" href="#ocpm-routes" title="Link to this heading"></a></h2>
+<p>These routes are responsible for the Object Centric Process Mining functionality.</p>
+</section>
+<section id="process-mining-routes">
+<h2>Process Mining Routes<a class="headerlink" href="#process-mining-routes" title="Link to this heading"></a></h2>
+<p>These routes are related to process mining features and data processing.</p>
+<dl class="py function" id="module-app.services.process_mining_routes">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.add_package">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.add_package" title="Link to this definition"></a></dt>
+<dd><p>Adds a new package.</p>
+<p>This endpoint allows adding a new package by receiving a JSON payload and passing it to
+the ProcessMiningBean to process the package. Upon successful addition, it returns the package data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the newly created package.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_activities_preditions">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_activities_preditions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_activities_preditions" title="Link to this definition"></a></dt>
+<dd><p>Retrieves activity predictions based on order context.</p>
+<p>This endpoint returns predictions for activities related to a specific order and its context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>order_id</strong> (<em>str</em>) – The ID of the order.</p></li>
+<li><p><strong>origin</strong> (<em>str</em>) – The origin of the order.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON object containing the activity predictions, or an error message if no predictions are available.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_avg_time">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_avg_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_avg_time" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the average delivery time.</p>
+<p>This endpoint returns the average time taken for deliveries as a JSON response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the average delivery time.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_case_concept_name_columns">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_case_concept_name_columns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_case_concept_name_columns" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the case concept name columns for a given data unit.</p>
+<p>This endpoint returns the case concept name columns based on the provided filename from the data unit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the case concept name columns for the specified data unit.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_conformance_checkpoints">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_conformance_checkpoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_conformance_checkpoints" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the conformance checkpoints.</p>
+<p>This endpoint returns the conformance checkpoints in the data as a JSON response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the conformance checkpoints.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_non_conformance_path">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_non_conformance_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_non_conformance_path" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the non-conformance paths.</p>
+<p>This endpoint returns the non-conformance paths found in the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the non-conformance paths.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_off_track_ongoing_orders">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_off_track_ongoing_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_off_track_ongoing_orders" title="Link to this definition"></a></dt>
+<dd><p>Retrieves off-track ongoing orders.</p>
+<p>This endpoint returns the off-track orders that are still ongoing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the off-track ongoing orders.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_off_track_orders">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_off_track_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_off_track_orders" title="Link to this definition"></a></dt>
+<dd><p>Retrieves off-track orders.</p>
+<p>This endpoint returns the off-track orders based on their current state (not completed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the off-track orders.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.get_packages">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">get_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.get_packages" title="Link to this definition"></a></dt>
+<dd><p>Retrieves all available packages.</p>
+<p>This endpoint returns a list of all the packages in the system as a JSON response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object containing the list of available packages.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.packageToDTO">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">packageToDTO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.packageToDTO" title="Link to this definition"></a></dt>
+<dd><p>Converts a Package instance to a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>package</strong> (<em>Package</em>) – The package instance to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary representation of the package.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.proccess_model_start">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">proccess_model_start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.proccess_model_start" title="Link to this definition"></a></dt>
+<dd><p>Starts the process model generation based on the provided parameters.</p>
+<p>This endpoint initiates the creation of a process model based on the specified graph type
+(e.g., performance, frequency, Petri net) and other parameters like complexity and filters.
+It runs the model generation in a separate process to avoid blocking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object indicating the status of the request and the filename.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.proccess_model_verify">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">proccess_model_verify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.proccess_model_verify" title="Link to this definition"></a></dt>
+<dd><p>Verifies the status of the process model generation.</p>
+<p>This endpoint checks if the SVG file representing the process model is generated. If it exists,
+it returns the file. If the file is still being generated, it responds with a message indicating
+that the SVG is being generated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated SVG file or a status message indicating the current process state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.process_mining_routes.xes_to_csv">
+<span class="sig-prename descclassname"><span class="pre">app.services.process_mining_routes.</span></span><span class="sig-name descname"><span class="pre">xes_to_csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.process_mining_routes.xes_to_csv" title="Link to this definition"></a></dt>
+<dd><p>Converts a .xes file to CSV format.</p>
+<p>This endpoint converts an uploaded .xes file to a CSV file and returns a success message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A success message indicating the file was converted to CSV.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="statistics-routes">
+<h2>Statistics Routes<a class="headerlink" href="#statistics-routes" title="Link to this heading"></a></h2>
+<p>These routes provide access to statistical analysis features.</p>
+<dl class="py function" id="module-app.services.statistics_routes">
+<dt class="sig sig-object py" id="app.services.statistics_routes.evolution_data">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">evolution_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.evolution_data" title="Link to this definition"></a></dt>
+<dd><p>Retrieve evolution data for deliveries based on the provided filters.</p>
+<p>This endpoint fetches evolution data about deliveries over time based on the provided filters like
+shipping company, store, product ID, order ID, and more.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transportadora</strong> (<em>str</em>) – The shipping company for filtering orders.</p></li>
+<li><p><strong>loja</strong> (<em>str</em>) – The store for filtering orders.</p></li>
+<li><p><strong>product_id</strong> (<em>str</em>) – The product ID for filtering orders.</p></li>
+<li><p><strong>order_id</strong> (<em>str</em>) – The order ID for filtering orders.</p></li>
+<li><p><strong>product_type</strong> (<em>str</em>) – The type of product for filtering orders.</p></li>
+<li><p><strong>distribution_center</strong> (<em>str</em>) – The distribution center for filtering orders.</p></li>
+<li><p><strong>transportation_method</strong> (<em>str</em>) – The transportation method for filtering orders.</p></li>
+<li><p><strong>delivery_type</strong> (<em>str</em>) – The delivery type for filtering orders.</p></li>
+<li><p><strong>classification</strong> (<em>str</em>) – The classification for filtering orders.</p></li>
+<li><p><strong>month</strong> (<em>str</em>) – The month for filtering evolution data.</p></li>
+<li><p><strong>year</strong> (<em>str</em>) – The year for filtering evolution data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the evolution data.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_complained_orders_by_year_month">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_complained_orders_by_year_month</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_complained_orders_by_year_month" title="Link to this definition"></a></dt>
+<dd><p>Retrieve complained orders by year and month.</p>
+<p>This endpoint fetches statistics of complained orders based on the provided year, month,
+store, shipping company, product ID, and package type ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for the order statistics.</p></li>
+<li><p><strong>month</strong> (<em>int</em>) – The month for the order statistics.</p></li>
+<li><p><strong>store</strong> (<em>str</em>) – The store for filtering orders.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em>) – The shipping company for filtering orders.</p></li>
+<li><p><strong>product_id_substring</strong> (<em>str</em>) – The substring of product ID for filtering orders.</p></li>
+<li><p><strong>package_type_id_substring</strong> (<em>str</em>) – The substring of package type ID for filtering orders.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the list of complained orders.
+status_code: HTTP status code 200 or 400 if there are validation errors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_complained_packages_by_last_days_or_months">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_complained_packages_by_last_days_or_months</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_complained_packages_by_last_days_or_months" title="Link to this definition"></a></dt>
+<dd><p>Retrieve complained orders by the last specified days or months.</p>
+<p>This endpoint fetches the statistics for complained orders based on the time frame provided
+in days or months. The time frame can be 7, 15, or 30 days or 3, 6, or 12 months.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>days</strong> (<em>int</em>) – The number of days for the order statistics.</p></li>
+<li><p><strong>months</strong> (<em>int</em>) – The number of months for the order statistics.</p></li>
+<li><p><strong>year</strong> (<em>int</em>) – The year for the order statistics.</p></li>
+<li><p><strong>month</strong> (<em>int</em>) – The month for the order statistics.</p></li>
+<li><p><strong>store</strong> (<em>str</em>) – The store for filtering orders.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em>) – The shipping company for filtering orders.</p></li>
+<li><p><strong>product_id_substring</strong> (<em>str</em>) – The substring of product ID for filtering orders.</p></li>
+<li><p><strong>package_type_id_substring</strong> (<em>str</em>) – The substring of package type ID for filtering orders.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the list of complained orders.
+status_code: HTTP status code 200 or 400 if there are validation errors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_filter_fields">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_filter_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_filter_fields" title="Link to this definition"></a></dt>
+<dd><p>Retrieve available filter fields for the statistics.</p>
+<p>This endpoint returns the list of available fields that can be used to filter the statistics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON response containing the filter fields.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_monthly_deliveries">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_monthly_deliveries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_monthly_deliveries" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve the monthly deliveries based on various filters like year, month, store, etc.</p>
+<dl class="simple">
+<dt>Query Parameters:</dt><dd><ul class="simple">
+<li><p>year: The year for filtering deliveries.</p></li>
+<li><p>month: The month for filtering deliveries.</p></li>
+<li><p>store: The store for filtering deliveries.</p></li>
+<li><p>shipping_company: The shipping company for filtering deliveries.</p></li>
+<li><p>product_id_substring: The product ID for filtering deliveries.</p></li>
+<li><p>package_type_id_substring: The package type ID for filtering deliveries.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of monthly deliveries in JSON format.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_packages">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_packages" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve cardinal statistics for packages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON object representing cardinal statistics.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_recent_deliveries">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_recent_deliveries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_recent_deliveries" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve recent deliveries based on filters such as days, months, year, and other parameters.</p>
+<dl class="simple">
+<dt>Query Parameters:</dt><dd><ul class="simple">
+<li><p>days: The number of days for filtering recent deliveries.</p></li>
+<li><p>months: The number of months for filtering recent deliveries.</p></li>
+<li><p>month: The month for filtering recent deliveries.</p></li>
+<li><p>year: The year for filtering recent deliveries.</p></li>
+<li><p>store: The store for filtering deliveries.</p></li>
+<li><p>shipping_company: The shipping company for filtering deliveries.</p></li>
+<li><p>product_id_substring: The product ID for filtering deliveries.</p></li>
+<li><p>package_type_id_substring: The package type ID for filtering deliveries.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of recent deliveries in JSON format.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_recyclable_packages">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_recyclable_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_recyclable_packages" title="Link to this definition"></a></dt>
+<dd><p>Retrieve recyclable packages data based on year and month.</p>
+<p>This endpoint fetches statistics about recyclable packages for a given year, month,
+store, and shipping company.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>year</strong> (<em>int</em>) – The year for the recyclable packages data.</p></li>
+<li><p><strong>month</strong> (<em>int</em>) – The month for the recyclable packages data.</p></li>
+<li><p><strong>store</strong> (<em>str</em>) – The store for filtering packages.</p></li>
+<li><p><strong>shipping_company</strong> (<em>str</em>) – The shipping company for filtering packages.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the list of recyclable packages.
+status_code: HTTP status code 200 or 400 if there are validation errors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_sensor_data_per_transportation_method">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_sensor_data_per_transportation_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_sensor_data_per_transportation_method" title="Link to this definition"></a></dt>
+<dd><p>Retrieve sensor data based on the transportation method.</p>
+<p>This endpoint returns sensor data like temperature, humidity, and atmospheric pressure
+grouped by product type and transportation method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON response containing the sensor data per transportation method.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_stores_and_shipping_companies">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_stores_and_shipping_companies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_stores_and_shipping_companies" title="Link to this definition"></a></dt>
+<dd><p>Retrieve a list of stores and shipping companies.</p>
+<p>This endpoint returns a list of all stores and shipping companies in the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON response containing the list of stores and shipping companies.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_top_complained_packages">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_top_complained_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_top_complained_packages" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve the top complained packages based on various filters like year, month, store, etc.</p>
+<dl class="simple">
+<dt>Query Parameters:</dt><dd><ul class="simple">
+<li><p>year: The year for filtering complaints.</p></li>
+<li><p>month: The month for filtering complaints.</p></li>
+<li><p>store: The store for filtering complaints.</p></li>
+<li><p>shipping_company: The shipping company for filtering complaints.</p></li>
+<li><p>top: Number of top complained packages to return.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of top complained packages in JSON format.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_top_complained_products">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_top_complained_products</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_top_complained_products" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve the top complained products based on various filters like year, month, store, etc.</p>
+<dl class="simple">
+<dt>Query Parameters:</dt><dd><ul class="simple">
+<li><p>year: The year for filtering complaints.</p></li>
+<li><p>month: The month for filtering complaints.</p></li>
+<li><p>store: The store for filtering complaints.</p></li>
+<li><p>shipping_company: The shipping company for filtering complaints.</p></li>
+<li><p>top: Number of top complained products to return.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of top complained products in JSON format.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_top_complained_products_percentage">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_top_complained_products_percentage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_top_complained_products_percentage" title="Link to this definition"></a></dt>
+<dd><p>Route to retrieve the top complained products by percentage of complaints based on various filters like year, month, store, etc.</p>
+<dl class="simple">
+<dt>Query Parameters:</dt><dd><ul class="simple">
+<li><p>year: The year for filtering complaints.</p></li>
+<li><p>month: The month for filtering complaints.</p></li>
+<li><p>store: The store for filtering complaints.</p></li>
+<li><p>shipping_company: The shipping company for filtering complaints.</p></li>
+<li><p>sales_min: The minimum sales threshold for filtering.</p></li>
+<li><p>top: Number of top complained products by percentage to return.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of top complained products by percentage in JSON format.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.get_years">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">get_years</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.get_years" title="Link to this definition"></a></dt>
+<dd><p>Retrieve a list of available years for the statistics.</p>
+<p>This endpoint returns a list of all years for which statistical data is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A JSON response containing the list of years.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.ongoing_deliveries">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">ongoing_deliveries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.ongoing_deliveries" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data for ongoing deliveries based on specified filters.</p>
+<p>This endpoint fetches ongoing deliveries with sensor data, filtered by the provided query parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transportadora</strong> (<em>str</em>) – The shipping company for filtering orders.</p></li>
+<li><p><strong>loja</strong> (<em>str</em>) – The store for filtering orders.</p></li>
+<li><p><strong>product_id</strong> (<em>str</em>) – The product ID for filtering orders.</p></li>
+<li><p><strong>order_id</strong> (<em>str</em>) – The order ID for filtering orders.</p></li>
+<li><p><strong>product_type</strong> (<em>str</em>) – The type of product for filtering orders.</p></li>
+<li><p><strong>distribution_center</strong> (<em>str</em>) – The distribution center for filtering orders.</p></li>
+<li><p><strong>transportation_method</strong> (<em>str</em>) – The transportation method for filtering orders.</p></li>
+<li><p><strong>delivery_type</strong> (<em>str</em>) – The delivery type for filtering orders.</p></li>
+<li><p><strong>classification</strong> (<em>str</em>) – The classification for filtering orders.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the list of ongoing deliveries.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.statistics_routes.sensor_variation">
+<span class="sig-prename descclassname"><span class="pre">app.services.statistics_routes.</span></span><span class="sig-name descname"><span class="pre">sensor_variation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.services.statistics_routes.sensor_variation" title="Link to this definition"></a></dt>
+<dd><p>Retrieve sensor variation data for a specific order.</p>
+<p>This endpoint returns sensor variation data (e.g., temperature, humidity, pressure) for a given order ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>orderId</strong> (<em>str</em>) – The ID of the order for which sensor data is required.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JSON response containing the sensor variation data.
+status_code: HTTP status code 200.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jsonify</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="backend_docs.html" class="btn btn-neutral float-left" title="Business Logic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Diogo Barbeiro &amp; Marco Gaspar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Business Logic &#8212; Pref 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Routes" href="routes.html" />
+    <link rel="prev" title="Pref Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="business-logic">
+<h1>Business Logic<a class="headerlink" href="#business-logic" title="Link to this heading">¶</a></h1>
+<section id="module-app.business_logic.DashboardBean">
+<span id="dashboard-logic"></span><h2>Dashboard Logic<a class="headerlink" href="#module-app.business_logic.DashboardBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.DashboardBean.</span></span><span class="sig-name descname"><span class="pre">DashboardBean</span></span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.apply_additional_filters">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_additional_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.apply_additional_filters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.filter_by_date">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.filter_by_date" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_complained_orders">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_complained_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_complained_orders" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_delivery_attempts_from_phases">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_delivery_attempts_from_phases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phases_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_delivery_attempts_from_phases" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_delivery_visits">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_delivery_visits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_delivery_visits" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_order_counts_by_status">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_order_counts_by_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_order_counts_by_status" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_orders_not_delivered">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_orders_not_delivered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_orders_not_delivered" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_phases">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_phases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_phases" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_successful_deliveries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries_within_or_out_of_promised_date">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_successful_deliveries_within_or_out_of_promised_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_within_promised_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries_within_or_out_of_promised_date" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.business_logic.DataUnitBean">
+<span id="data-unit-logic"></span><h2>Data Unit Logic<a class="headerlink" href="#module-app.business_logic.DataUnitBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.DataUnitBean.</span></span><span class="sig-name descname"><span class="pre">DataUnitBean</span></span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.create">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_mining_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packages_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders_products_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders_packages_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">products_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">products_packages_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders_deliveries_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orders_packages_sensors_file</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataUnit</span></span></span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.create" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.delete">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.delete" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.getSelected">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">getSelected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.getSelected" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.get_all_data_units">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_data_units</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.get_all_data_units" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.get_data_unit_by_timestamp">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_data_unit_by_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataUnit</span></span></span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.get_data_unit_by_timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.selectDataunit">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selectDataunit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.selectDataunit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.update">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xes_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataUnit</span></span></span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.update" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.DataUnitBean.DataUnitBean.update_name">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.DataUnitBean.DataUnitBean.update_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.business_logic.ETLOCELBean">
+<span id="etlocel-logic"></span><h2>ETLOCEL Logic<a class="headerlink" href="#module-app.business_logic.ETLOCELBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.ETLOCELBean.</span></span><span class="sig-name descname"><span class="pre">ETLOCELBean</span></span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.apply_ocpm_bll">
+<span class="sig-name descname"><span class="pre">apply_ocpm_bll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.apply_ocpm_bll" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.dim_bll">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dim_bll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.dim_bll" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.dims">
+<span class="sig-name descname"><span class="pre">dims</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[],</span> <span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]]</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.dims" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.extraction">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extraction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.extraction" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.fact_bll">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fact_bll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fact_bll" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.fonte_order_activities">
+<span class="sig-name descname"><span class="pre">fonte_order_activities</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_order_activities" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.fonte_packages">
+<span class="sig-name descname"><span class="pre">fonte_packages</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_packages" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.fonte_products">
+<span class="sig-name descname"><span class="pre">fonte_products</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_products" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.gerar_qualifiers">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gerar_qualifiers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.gerar_qualifiers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.load">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dims</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.load" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.log_bll">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">log_bll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_activities</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.log_bll" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.ocel_pivot_dataframe">
+<span class="sig-name descname"><span class="pre">ocel_pivot_dataframe</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.ocel_pivot_dataframe" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.pd">
+<span class="sig-name descname"><span class="pre">pd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'pandas'</span> <span class="pre">from</span> <span class="pre">'C:\\Projetos\\EmbalagemInteligente\\Backend\\Flask_pm4py\\venv\\Lib\\site-packages\\pandas\\__init__.py'&gt;</span></em><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.pd" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.populate_fact_table">
+<span class="sig-name descname"><span class="pre">populate_fact_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'facts_table'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dim_products'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dim_packages'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dim_orders'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dim_activities'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamps_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dim_timestamps'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.populate_fact_table" title="Link to this definition">¶</a></dt>
+<dd><p>Configura a estrutura do banco de dados e popula a tabela de fatos.
+Se as tabelas já existirem, elas são alteradas para garantir as regras de chaves primárias e estrangeiras.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.products_unique_lines_leading">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">products_unique_lines_leading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.products_unique_lines_leading" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.relationships_fact_table">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relationships_fact_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.relationships_fact_table" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.set_objects_relationships">
+<span class="sig-name descname"><span class="pre">set_objects_relationships</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eid_orderid_from_fact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.set_objects_relationships" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.substituir_valor">
+<span class="sig-name descname"><span class="pre">substituir_valor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabelaB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_B2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coluna_B3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.substituir_valor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.sync_table_with_incremental">
+<span class="sig-name descname"><span class="pre">sync_table_with_incremental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.sync_table_with_incremental" title="Link to this definition">¶</a></dt>
+<dd><p>Sincroniza uma tabela do banco de dados com dados incrementais usando a estratégia “old-new”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_manager</strong> – Instância do DBManager para gerenciar conexões e operações no banco de dados.</p></li>
+<li><p><strong>table_name</strong> – Nome da tabela no banco de dados que será sincronizada.</p></li>
+<li><p><strong>new_data</strong> – DataFrame contendo os novos dados para sincronizar.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.ETLOCELBean.treatment">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">treatment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.ETLOCELBean.treatment" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.extract_data">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ETLOCELBean.</span></span><span class="sig-name descname"><span class="pre">extract_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.extract_data" title="Link to this definition">¶</a></dt>
+<dd><p>Extrai dados do banco de origem.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.load_data">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ETLOCELBean.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.load_data" title="Link to this definition">¶</a></dt>
+<dd><p>Carrega os dados na tabela de destino, evitando duplicações.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ETLOCELBean.transform_data">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ETLOCELBean.</span></span><span class="sig-name descname"><span class="pre">transform_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ETLOCELBean.transform_data" title="Link to this definition">¶</a></dt>
+<dd><p>Realiza a transformação e elimina duplicações.</p>
+</dd></dl>
+
+</section>
+<section id="module-app.business_logic.ObjectCentricProcessMiningBean">
+<span id="object-centric-process-mining-logic"></span><h2>Object Centric Process Mining Logic<a class="headerlink" href="#module-app.business_logic.ObjectCentricProcessMiningBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.ObjectCentricProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">ObjectCentricProcessMiningBean</span></span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.ET">
+<span class="sig-name descname"><span class="pre">ET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'xml.etree.ElementTree'</span> <span class="pre">from</span> <span class="pre">'C:\\Users\\Barbeirok\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\xml\\etree\\ElementTree.py'&gt;</span></em><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.ET" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.actfreq">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">actfreq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ano</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.actfreq" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.bad_products_intelligence">
+<span class="sig-name descname"><span class="pre">bad_products_intelligence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.bad_products_intelligence" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.extrair_id_enc">
+<span class="sig-name descname"><span class="pre">extrair_id_enc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.extrair_id_enc" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filer_by_pm4py">
+<span class="sig-name descname"><span class="pre">filer_by_pm4py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantity_filter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filer_by_pm4py" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filtrar_encomendas_por_atividade">
+<span class="sig-name descname"><span class="pre">filtrar_encomendas_por_atividade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atividades</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filtrar_encomendas_por_atividade" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.getActs">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">getActs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.getActs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.lead_with_general_filters">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lead_with_general_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.lead_with_general_filters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.os">
+<span class="sig-name descname"><span class="pre">os</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'os'</span> <span class="pre">(frozen)&gt;</span></em><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.os" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.processCubeGettingData">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">processCubeGettingData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leaded_filters=Empty</span> <span class="pre">DataFrame</span> <span class="pre">Columns:</span> <span class="pre">[]</span> <span class="pre">Index:</span> <span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.processCubeGettingData" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.tdad">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tdad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.tdad" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_column_based_on_values">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_column_based_on_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modify_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_column_based_on_values" title="Link to this definition">¶</a></dt>
+<dd><p>Modifica uma coluna do DataFrame com base na presença de valores em outra coluna.</p>
+<p>Se nenhum dos valores da lista <cite>required_values</cite> estiver presente na coluna <cite>check_column</cite>,
+a coluna <cite>modify_column</cite> será definida como uma lista vazia (<cite>[]</cite>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – DataFrame Pandas.</p></li>
+<li><p><strong>check_column</strong> – Nome da coluna a ser verificada.</p></li>
+<li><p><strong>modify_column</strong> – Nome da coluna que será modificada.</p></li>
+<li><p><strong>required_values</strong> – Lista de strings que devem estar presentes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame modificado.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_edge_color">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_edge_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">svg_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'green'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_edge_color" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="process-mining-logic">
+<h2>Process Mining Logic<a class="headerlink" href="#process-mining-logic" title="Link to this heading">¶</a></h2>
+<p id="module-app.business_logic.ProcessMiningBean">This module handles the core process mining logic.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">ProcessMiningBean</span></span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class manages process mining operations and package management.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.add_file_dependency_to_filter">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_file_dependency_to_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_join</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_join</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.add_file_dependency_to_filter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.add_package">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;module</span> <span class="pre">'app.data_access.models.Package'</span> <span class="pre">from</span> <span class="pre">'C:\\Projetos\\EmbalagemInteligente\\Backend\\Flask_pm4py\\app\\data_access\\models\\Package.py'&gt;</span></span></span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.add_package" title="Link to this definition">¶</a></dt>
+<dd><p>Adds a new package to the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – A dictionary with keys ‘name’, ‘version’, and optional ‘description’.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Flask response object containing the created package or an error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.apagar_arquivo_svg">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apagar_arquivo_svg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nome_arquivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.apagar_arquivo_svg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.create_filters">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_original_dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.create_filters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.dataUnitBean">
+<span class="sig-name descname"><span class="pre">dataUnitBean</span></span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.dataUnitBean" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean" title="app.business_logic.DataUnitBean.DataUnitBean"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataUnitBean</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_activities_predictions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions1">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_activities_predictions1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_filters">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_filters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_filters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_package">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_package</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_package" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_deliveries">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_average_deliveries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_deliveries" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_path">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_average_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_path" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_case_concept_name_columns">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_case_concept_name_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataUnit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_case_concept_name_columns" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_alignments">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_conformance_checking_alignments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_alignments" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_token_based_replay">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_conformance_checking_token_based_replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_token_based_replay" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checkpoints">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_conformance_checkpoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checkpoints" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_filter_by_key">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filter_by_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_filter_by_key" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_frequency_graph_by_data_file">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_frequency_graph_by_data_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_frequency_graph_by_data_file" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_off_track_orders">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_off_track_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ongoing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_off_track_orders" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_performance_graph_by_data_file">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_performance_graph_by_data_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complexity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_performance_graph_by_data_file" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.ProcessMiningBean.get_petri_net_map">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_petri_net_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataUnit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_petri_net_map" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.compute_avg_transition_times">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">compute_avg_transition_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimistic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">existing_activities</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.compute_avg_transition_times" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.get_conformance_following_orders">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">get_conformance_following_orders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filtered_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.get_conformance_following_orders" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.get_expected_sequence">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">get_expected_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.get_expected_sequence" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.get_optimistic_path">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">get_optimistic_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">existing_activities</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.get_optimistic_path" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.get_shortest_path">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">get_shortest_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.get_shortest_path" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.is_point_on_line">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">is_point_on_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.is_point_on_line" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.business_logic.ProcessMiningBean.predict_next_activity">
+<span class="sig-prename descclassname"><span class="pre">app.business_logic.ProcessMiningBean.</span></span><span class="sig-name descname"><span class="pre">predict_next_activity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.ProcessMiningBean.predict_next_activity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.business_logic.RealTimeStatisticsBean">
+<span id="real-time-statistics-logic"></span><h2>Real Time Statistics Logic<a class="headerlink" href="#module-app.business_logic.RealTimeStatisticsBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.RealTimeStatisticsBean.</span></span><span class="sig-name descname"><span class="pre">RealTimeStatisticsBean</span></span><a class="headerlink" href="#app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean.get_ongoing_orders_sensors">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_ongoing_orders_sensors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean.get_ongoing_orders_sensors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.business_logic.StatisticsBean">
+<span id="statistics-logic"></span><h2>Statistics Logic<a class="headerlink" href="#module-app.business_logic.StatisticsBean" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.business_logic.StatisticsBean.</span></span><span class="sig-name descname"><span class="pre">StatisticsBean</span></span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.apply_additional_filters">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_additional_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.apply_additional_filters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.calculate_complaints">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculate_complaints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_orders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_complaints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grouping_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.calculate_complaints" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.filter_by_date">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.filter_by_date" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.generate_cardinals">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_cardinals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.generate_cardinals" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_days">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_complained_orders_by_last_days</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">days</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_days" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_months">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_complained_orders_by_last_months</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">months</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_months" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_year_month">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_complained_orders_by_year_month</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_year_month" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_evolution_data">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_evolution_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_evolution_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_filter_fields">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filter_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_filter_fields" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_last_date">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_last_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_last_date" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_monthly_deliveries">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_monthly_deliveries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_monthly_deliveries" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_days">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_recent_deliveries_by_days</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">days</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_days" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_months">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_recent_deliveries_by_months</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">months</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_type_id_substring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_months" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_recyclable_packages">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_recyclable_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recyclable_packages" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sensor_variation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orderID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation2">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_sensor_variation2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orderID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation2" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_stores_and_shipping_companies">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_stores_and_shipping_companies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_stores_and_shipping_companies" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.get_years">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_years</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.get_years" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.open_csv_file">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">open_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usecols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.open_csv_file" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.top_10_complained">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">top_10_complained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_complained" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.top_10_complained_products_percentage">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">top_10_complained_products_percentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shipping_company</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sales_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_complained_products_percentage" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.business_logic.StatisticsBean.StatisticsBean.top_10_packages_complained">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">top_10_packages_complained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_filtered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_complaints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_packages_complained" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Pref</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Business Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.DashboardBean">Dashboard Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean"><code class="docutils literal notranslate"><span class="pre">DashboardBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.apply_additional_filters"><code class="docutils literal notranslate"><span class="pre">DashboardBean.apply_additional_filters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.filter_by_date"><code class="docutils literal notranslate"><span class="pre">DashboardBean.filter_by_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_complained_orders"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_complained_orders()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_delivery_attempts_from_phases"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_delivery_attempts_from_phases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_delivery_visits"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_delivery_visits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_order_counts_by_status"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_order_counts_by_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_orders_not_delivered"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_orders_not_delivered()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_phases"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_phases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_successful_deliveries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DashboardBean.DashboardBean.get_successful_deliveries_within_or_out_of_promised_date"><code class="docutils literal notranslate"><span class="pre">DashboardBean.get_successful_deliveries_within_or_out_of_promised_date()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.DataUnitBean">Data Unit Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean"><code class="docutils literal notranslate"><span class="pre">DataUnitBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.create"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.delete"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.getSelected"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.getSelected()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.get_all_data_units"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.get_all_data_units()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.get_data_unit_by_timestamp"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.get_data_unit_by_timestamp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.selectDataunit"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.selectDataunit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.update"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.DataUnitBean.DataUnitBean.update_name"><code class="docutils literal notranslate"><span class="pre">DataUnitBean.update_name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.ETLOCELBean">ETLOCEL Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.apply_ocpm_bll"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.apply_ocpm_bll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.dim_bll"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.dim_bll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.dims"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.dims</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.extraction"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.extraction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fact_bll"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.fact_bll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_order_activities"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.fonte_order_activities</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_packages"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.fonte_packages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.fonte_products"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.fonte_products</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.gerar_qualifiers"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.gerar_qualifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.load"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.log_bll"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.log_bll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.ocel_pivot_dataframe"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.ocel_pivot_dataframe</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.pd"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.pd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.populate_fact_table"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.populate_fact_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.products_unique_lines_leading"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.products_unique_lines_leading()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.relationships_fact_table"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.relationships_fact_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.set_objects_relationships"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.set_objects_relationships()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.substituir_valor"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.substituir_valor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.sync_table_with_incremental"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.sync_table_with_incremental()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ETLOCELBean.ETLOCELBean.treatment"><code class="docutils literal notranslate"><span class="pre">ETLOCELBean.treatment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ETLOCELBean.extract_data"><code class="docutils literal notranslate"><span class="pre">extract_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ETLOCELBean.load_data"><code class="docutils literal notranslate"><span class="pre">load_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ETLOCELBean.transform_data"><code class="docutils literal notranslate"><span class="pre">transform_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.ObjectCentricProcessMiningBean">Object Centric Process Mining Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.ET"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.ET</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.actfreq"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.actfreq()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.bad_products_intelligence"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.bad_products_intelligence()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.extrair_id_enc"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.extrair_id_enc()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filer_by_pm4py"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.filer_by_pm4py()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.filtrar_encomendas_por_atividade"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.filtrar_encomendas_por_atividade()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.getActs"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.getActs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.lead_with_general_filters"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.lead_with_general_filters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.os"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.os</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.processCubeGettingData"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.processCubeGettingData()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.tdad"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.tdad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_column_based_on_values"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.update_column_based_on_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ObjectCentricProcessMiningBean.ObjectCentricProcessMiningBean.update_edge_color"><code class="docutils literal notranslate"><span class="pre">ObjectCentricProcessMiningBean.update_edge_color()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#process-mining-logic">Process Mining Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.add_file_dependency_to_filter"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.add_file_dependency_to_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.add_package"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.add_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.apagar_arquivo_svg"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.apagar_arquivo_svg()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.create_filters"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.create_filters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.dataUnitBean"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.dataUnitBean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_activities_predictions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_activities_predictions1"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_activities_predictions1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_filters"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_all_filters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_all_package"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_all_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_deliveries"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_average_deliveries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_average_path"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_average_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_case_concept_name_columns"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_case_concept_name_columns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_alignments"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_conformance_checking_alignments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checking_token_based_replay"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_conformance_checking_token_based_replay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_conformance_checkpoints"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_conformance_checkpoints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_filter_by_key"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_filter_by_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_frequency_graph_by_data_file"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_frequency_graph_by_data_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_off_track_orders"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_off_track_orders()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_performance_graph_by_data_file"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_performance_graph_by_data_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.ProcessMiningBean.get_petri_net_map"><code class="docutils literal notranslate"><span class="pre">ProcessMiningBean.get_petri_net_map()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.compute_avg_transition_times"><code class="docutils literal notranslate"><span class="pre">compute_avg_transition_times()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.get_conformance_following_orders"><code class="docutils literal notranslate"><span class="pre">get_conformance_following_orders()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.get_expected_sequence"><code class="docutils literal notranslate"><span class="pre">get_expected_sequence()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.get_optimistic_path"><code class="docutils literal notranslate"><span class="pre">get_optimistic_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.get_shortest_path"><code class="docutils literal notranslate"><span class="pre">get_shortest_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.is_point_on_line"><code class="docutils literal notranslate"><span class="pre">is_point_on_line()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.ProcessMiningBean.predict_next_activity"><code class="docutils literal notranslate"><span class="pre">predict_next_activity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.RealTimeStatisticsBean">Real Time Statistics Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean"><code class="docutils literal notranslate"><span class="pre">RealTimeStatisticsBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.RealTimeStatisticsBean.RealTimeStatisticsBean.get_ongoing_orders_sensors"><code class="docutils literal notranslate"><span class="pre">RealTimeStatisticsBean.get_ongoing_orders_sensors()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-app.business_logic.StatisticsBean">Statistics Logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean"><code class="docutils literal notranslate"><span class="pre">StatisticsBean</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.apply_additional_filters"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.apply_additional_filters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.calculate_complaints"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.calculate_complaints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.filter_by_date"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.filter_by_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.generate_cardinals"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.generate_cardinals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_days"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_complained_orders_by_last_days()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_last_months"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_complained_orders_by_last_months()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_complained_orders_by_year_month"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_complained_orders_by_year_month()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_evolution_data"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_evolution_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_filter_fields"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_filter_fields()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_last_date"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_last_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_monthly_deliveries"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_monthly_deliveries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_days"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_recent_deliveries_by_days()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recent_deliveries_by_months"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_recent_deliveries_by_months()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_recyclable_packages"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_recyclable_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_sensor_variation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_sensor_variation2"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_sensor_variation2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_stores_and_shipping_companies"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_stores_and_shipping_companies()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.get_years"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.get_years()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.open_csv_file"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.open_csv_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_complained"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.top_10_complained()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_complained_products_percentage"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.top_10_complained_products_percentage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#app.business_logic.StatisticsBean.StatisticsBean.top_10_packages_complained"><code class="docutils literal notranslate"><span class="pre">StatisticsBean.top_10_packages_complained()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">Routes</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Pref Documentation</a></li>
+      <li>Next: <a href="routes.html" title="next chapter">Routes</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Diogo Barbeiro & Marco Gaspar.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/backend_docs.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

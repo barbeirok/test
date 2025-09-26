@@ -1,0 +1,42 @@
+Routes
+=======
+
+Dashboard Routes
+----------------
+
+.. automodule:: app.services.dashboard_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Data Unit Routes
+-----------------
+
+.. automodule:: app.services.data_unit_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+OCPM Routes
+-----------
+
+.. automodule:: app.services.ocpm_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Process Mining Routes
+---------------------
+
+.. automodule:: app.services.process_mining_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Statistics Routes
+------------------
+
+.. automodule:: app.services.statistics_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:

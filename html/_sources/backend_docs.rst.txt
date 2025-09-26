@@ -1,0 +1,58 @@
+Business Logic
+===============
+
+Dashboard Logic
+----------------
+.. automodule:: app.business_logic.DashboardBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Data Unit Logic
+----------------
+.. automodule:: app.business_logic.DataUnitBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+ETLOCEL Logic
+--------------
+.. automodule:: app.business_logic.ETLOCELBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Object Centric Process Mining Logic
+-----------------------------------
+.. automodule:: app.business_logic.ObjectCentricProcessMiningBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Process Mining Logic
+----------------
+.. automodule:: app.business_logic.ProcessMiningBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Real Time Statistics Logic
+--------------------------
+.. automodule:: app.business_logic.RealTimeStatisticsBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Statistics Logic
+----------------
+
+.. automodule:: app.business_logic.StatisticsBean
+   :members:
+   :undoc-members:
+   :show-inheritance:

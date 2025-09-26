@@ -1,0 +1,80 @@
+Business Logic
+==============
+
+This section outlines the core business logic of the application.
+
+Dashboard Logic
+----------------
+
+This module handles the core dashboard functionality, including user interactions and data visualizations.
+
+.. automodule:: app.business_logic.DashboardBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Data Unit Logic
+----------------
+
+This module defines the operations related to data unit processing, including CRUD operations and transformations.
+
+.. automodule:: app.business_logic.DataUnitBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+ETLOCEL Logic
+--------------
+
+The ETLOCEL logic module manages the processing and analysis of ETLOCEL-related data.
+
+.. automodule:: app.business_logic.ETLOCELBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Object Centric Process Mining Logic
+-----------------------------------
+
+This module provides the logic for Object-Centric Process Mining, helping to model business processes.
+
+.. automodule:: app.business_logic.ObjectCentricProcessMiningBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Process Mining Logic
+--------------------
+
+This module focuses on process mining functionality for analyzing and extracting insights from process data.
+
+.. automodule:: app.business_logic.ProcessMiningBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Real Time Statistics Logic
+--------------------------
+
+This module handles real-time statistics and analytics.
+
+.. automodule:: app.business_logic.RealTimeStatisticsBean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Statistics Logic
+----------------
+
+This module defines the core logic for statistical analysis and reporting.
+
+.. automodule:: app.business_logic.StatisticsBean
+   :members:
+   :undoc-members:
+   :show-inheritance:

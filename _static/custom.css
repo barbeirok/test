@@ -1,0 +1,10 @@
+/* Add a border, background, or any style between methods */
+.docstring-section {
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.docstring-section + .docstring-section {
+    margin-top: 40px; /* More space between methods */
+}

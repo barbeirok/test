@@ -1,0 +1,58 @@
+Routes
+======
+
+This section outlines the routes available in different parts of the application.
+
+Dashboard Routes
+----------------
+
+These routes handle the dashboard functionality.
+
+.. automodule:: app.services.dashboard_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Data Unit Routes
+-----------------
+
+These routes deal with operations related to data units.
+
+.. automodule:: app.services.data_unit_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+OCPM Routes
+-----------
+
+These routes are responsible for the Object Centric Process Mining functionality.
+
+.. automodule:: app.services.ocpm_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Process Mining Routes
+---------------------
+
+These routes are related to process mining features and data processing.
+
+.. automodule:: app.services.process_mining_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Statistics Routes
+------------------
+
+These routes provide access to statistical analysis features.
+
+.. automodule:: app.services.statistics_routes
+   :members:
+   :undoc-members:
+   :show-inheritance:
